@@ -152,7 +152,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default tasks
-  grunt.registerTask('build', ['jshint','uglify:dev','compass']);
+  grunt.registerTask('build', ['jshint','uglify:dev','htmlmin:dev','compass']);
   grunt.registerTask('prod', ['imagemin','svgmin','compass','cssmin','uglify:prod','htmlmin:prod']);
 
   grunt.registerTask('images', [], function () {
