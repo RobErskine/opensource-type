@@ -129,6 +129,7 @@ body, html {
 body {
   font-size: 62.5%;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* line 3, ../../build/sass/screen.scss */
@@ -158,24 +159,27 @@ p {
 
 /* line 21, ../../build/sass/screen.scss */
 .drawer {
-  width: 0;
-  overflow: hidden;
+  width: 33%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: red;
   height: 100%;
   float: right;
   z-index: 2;
+  position: relative;
+  left: 33%;
   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
 
-/* line 31, ../../build/sass/screen.scss */
+/* line 34, ../../build/sass/screen.scss */
 .intro, .pair {
   height: 100%;
   position: relative;
   border-bottom: 2px solid #000;
 }
-/* line 35, ../../build/sass/screen.scss */
+/* line 38, ../../build/sass/screen.scss */
 .intro button, .pair button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -192,16 +196,16 @@ p {
   z-index: 3;
 }
 
-/* line 47, ../../build/sass/screen.scss */
-.pair.drawer-active .drawer {
-  width: 33%;
-}
 /* line 50, ../../build/sass/screen.scss */
+.pair.drawer-active .drawer {
+  left: 0;
+}
+/* line 53, ../../build/sass/screen.scss */
 .pair.drawer-active .copy {
   margin-left: -33%;
 }
 
-/* line 55, ../../build/sass/screen.scss */
+/* line 58, ../../build/sass/screen.scss */
 .copy {
   position: absolute;
   top: 50%;

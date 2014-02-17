@@ -19,12 +19,15 @@ p{
 }
 
 .drawer{
-	width:0;
-	overflow:hidden;
+	width:33%;
+	overflow-x:hidden;
+	overflow-y: scroll;
 	background-color:red;
 	height:100%;
 	float:right;
 	z-index:2;
+	position:relative;
+	left:33%;
 	@include transition(all .6s ease-in-out);
 }
 
@@ -45,7 +48,7 @@ p{
 
 .pair.drawer-active{
 	.drawer{
-		width:33%;
+		left:0;
 	}
 	.copy{
 		margin-left:-33%;
